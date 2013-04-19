@@ -1,35 +1,20 @@
 #include <stdio.h>
 #include <string.h>
-#define TAB 7
-extern char * get_line ();
 
+extern char * get_input ();
+extern char * detab(char *);
 
 int main () {
-
-
-	int len;
 	char * line;
-
-
-	for (; ;) {
-		int len = strlen(line = get_line());
-		detab(line);
-		free(line);
-	}
-
+	line = get_input();
+		
+	if(!line)
+		return 0;
+	char * to_print = detab(line);
+	printf("%s\n", to_print);
+	free(to_print);
+	free(line);
+	
 	return 0;
 }
-void detab (char * line) {
-	int i, j;
-	int len = strlen(line);
-	for (i = 0; i < len; ++i) {
-		if (line[i] == '\t') {
-			for (j = 0; j < TAB; ++j) {
-				putchar(' ');
-			}
-		} else {
-			putchar(line[i]);
-		}
-	}
-	putchar('\n');
-}
+

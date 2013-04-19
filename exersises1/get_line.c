@@ -3,7 +3,7 @@ char * get_line() {
 	char * a;
 	int len = 0;
 	int i = 0;
-	char c;
+	int c;
 	a = malloc(1);
 	len = 1;
 
@@ -13,12 +13,10 @@ char * get_line() {
 			a = (char *) realloc(a, len);
 		}
 		a[i] = c;
+		len++;
 	}
 	
-	if(c == EOF) {
-		free(a);
-		return NULL;
-	}
+	
 	a[i] = '\0';
-	return a;
+	return (len == 1 && c == EOF)?(NULL):(a);
 }

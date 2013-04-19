@@ -1,11 +1,10 @@
 #include <stdio.h>
+#include <memory.h>
 #define MAXLEN 256
 int main () {
 	int cnt[MAXLEN];
 	int c;
-	for(c = 0; c < MAXLEN; ++c) {
-		cnt[c] = 0;
-	}
+	memset(cnt, 0, sizeof(cnt));
 
 	int cur_len;
 

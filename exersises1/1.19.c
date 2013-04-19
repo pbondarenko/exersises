@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-extern char * get_line ();
-extern void reverse(char *);
+extern char * get_input ();
+extern char * reverse(char *);
 
 int main () {
 
-	for (; ;) {
-		char * line = get_line();
-		if(!line)
-			break;
-		reverse(line);
-		printf("%s\n", line);
-		free(line);
-	}
+	char * line = get_input();
+	if(!line)
+		return 0;
+	char * to_print = reverse(line);
+	printf("%s\n", to_print);
+	free(to_print);
+	free(line);
+	
 
 	return 0;
 }

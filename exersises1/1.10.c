@@ -1,26 +1,21 @@
 #include <stdio.h>
 
 int main () {
-/*
-	printf("abcd\tavbd");
-	putchar('\b');
-	putchar('\b');
-	putchar('\n');
-	return 0;*/
+
 	int c;
 	for (; (c = getchar()) != EOF;) {
-		if (c == '\t') {
-			putchar('\\');
-			putchar('t');
-		}
-		else {
-			if (c == '\b') {
+		switch (c) {
+			case '\t':
+				putchar('\\');
+				putchar('t');
+				break;
+			case '\b':
 				putchar('\\');
 				putchar('b');
-			}
-			else {
+				break;
+			default:
 				putchar(c);
-			}
+				break;
 		}
 	}
 	return 0;

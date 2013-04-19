@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 
-char * copy (char *);
 extern char * get_line();
 
 int main () {
 
 	int max_len = 0;
-	max_string = malloc(1);
+	char * max_string = malloc(1);
+	max_string[0] = '\0';
 	int len;
 
 	char * line;
@@ -15,7 +15,7 @@ int main () {
 
 		if (max_len < len) {
 			max_len = len;
-			max_string = copy(line);
+			max_string = strdup(line);
 
 		}
 		free(line);
@@ -23,12 +23,5 @@ int main () {
 	printf("%s\n", max_string);
 	free(max_string);
 	return 0;
-}
-char * copy (char * line) {
-	int len = strlen(line);
-	char * max_string = (char *) realloc(max_string, len);
-
-	memcpy(max_string, line, len);
-	return max_string;
 }
 
