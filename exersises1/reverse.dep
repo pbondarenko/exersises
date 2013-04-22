@@ -1,3 +1,0 @@
-reverse.o reverse.dep: reverse.c my_lib.h
-
-my_lib.h:

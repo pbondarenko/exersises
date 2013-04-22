@@ -1,3 +1,0 @@
-delete_comments.o delete_comments.dep: delete_comments.c my_lib.h
-
-my_lib.h:

@@ -1,4 +1,0 @@
-print_n_symb_in_line.o print_n_symb_in_line.dep: print_n_symb_in_line.c \
- my_lib.h
-
-my_lib.h:

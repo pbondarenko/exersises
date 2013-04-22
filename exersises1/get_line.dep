@@ -1,3 +1,0 @@
-get_line.o get_line.dep: get_line.c my_lib.h
-
-my_lib.h:

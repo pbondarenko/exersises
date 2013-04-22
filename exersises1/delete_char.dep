@@ -1,3 +1,0 @@
-delete_char.o delete_char.dep: delete_char.c my_lib.h
-
-my_lib.h:

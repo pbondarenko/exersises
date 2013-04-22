@@ -1,3 +1,0 @@
-get_input.o get_input.dep: get_input.c my_lib.h
-
-my_lib.h:

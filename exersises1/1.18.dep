@@ -1,3 +1,0 @@
-1.18.o 1.18.dep: 1.18.c my_lib.h
-
-my_lib.h:

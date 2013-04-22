@@ -1,3 +1,0 @@
-1.21.o 1.21.dep: 1.21.c my_lib.h
-
-my_lib.h:
