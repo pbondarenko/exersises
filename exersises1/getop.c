@@ -1,5 +1,4 @@
-#include <ctype.h>
-#include <stdio.h>
+#include "my_lib.h"
 #define NUMBER '0'
 
 int getch(void);

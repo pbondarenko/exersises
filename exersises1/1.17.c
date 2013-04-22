@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <string>
-
-extern char * get_line();
-
+#include "my_lib.h"
 
 int main () {
 

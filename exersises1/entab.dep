@@ -1,0 +1,3 @@
+entab.o entab.dep: entab.c my_lib.h
+
+my_lib.h:

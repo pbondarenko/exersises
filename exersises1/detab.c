@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "my_lib.h"
 
 #define TAB 7
 

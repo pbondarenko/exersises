@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <string.h>
+#include "my_lib.h"
 
-extern char * get_input ();
-extern char * delete_comments(char *);
 int main () {
 
 

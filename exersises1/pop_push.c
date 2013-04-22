@@ -1,3 +1,4 @@
+#include "my_lib.h"
 #define MAXVAL 100 /* максимальная глубина стека */
 int sp = 0; /* следующая свободная позиция в стеке */
 double val[ MAXVAL ]; /* стек */

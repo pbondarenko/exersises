@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "my_lib.h" 
-extern char * good_c(char *);
+
 int main() {
 	char * line = get_input();
 	if(line == NULL) {

@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-
-extern char * get_input ();
-extern char * detab(char *);
+#include "my_lib.h"
 
 int main () {
 	char * line;

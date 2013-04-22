@@ -1,8 +1,4 @@
-#include <stdio.h>
-#define TAB 7
-
-extern char * get_input ();
-extern char * entab (char *);
+#include "my_lib.h"
 
 int main () {
 

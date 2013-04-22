@@ -1,3 +1,5 @@
+#include "my_lib.h"
+
 #define BUFSIZE 100
 char buf[BUFSIZE]; /* буфер для ungetch */
 int bufp = 0; /* след, свободная позиция в буфере */

@@ -1,7 +1,4 @@
-#include <stdio.h>
-
-extern char * get_input ();
-extern char * all_spaces_to_one(char *);
+#include "my_lib.h"
 
 int main () {
 	char * line;

@@ -1,11 +1,4 @@
-#include<string.h>
-#include <stdio.h>
-#include <stdlib.h>
-extern char * delete_comments(char *);
-extern char * delete_escape(char *);
-extern char * delete_string(char *);
-extern char * delete_char(char *);
-extern char * delete_brackets(char *);
+#include "my_lib.h"
 
 char * good_c (char * line) {
 	char * line_without_comments = delete_comments(line);

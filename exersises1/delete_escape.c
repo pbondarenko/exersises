@@ -1,6 +1,4 @@
-#include<string.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "my_lib.h"
 
 int escape (char c) {
 	return c == 't' || c == '\'' || c == '\"' || c == '\?' || c == '\\'

@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "my_lib.h"
+
 char * print_n_symb_in_line(char * line, int n) {
         int i;
         int len = strlen(line);

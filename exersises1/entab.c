@@ -1,3 +1,5 @@
+#include "my_lib.h"
+
 #define TAB 7
 char * entab (char * line) {
         int i, j;

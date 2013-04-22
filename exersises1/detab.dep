@@ -1,0 +1,3 @@
+detab.o detab.dep: detab.c my_lib.h
+
+my_lib.h:

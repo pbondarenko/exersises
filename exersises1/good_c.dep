@@ -1,0 +1,3 @@
+good_c.o good_c.dep: good_c.c my_lib.h
+
+my_lib.h:

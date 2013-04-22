@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "my_lib.h"
 char * delete_comments(char * line) {
 	int i;
 	int len = strlen(line);

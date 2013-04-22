@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <string.h>
+#include <my_lib.h>
+
 char * all_spaces_to_one(char * line) {
         int len = strlen(line);
 	char * result = (char *) malloc(len+1);

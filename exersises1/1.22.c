@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#define TAB 7
-
-extern char * get_line ();
-extern char * print_n_symb_in_line(char*, int);
+#include "my_lib.h"
 
 int main () {
 

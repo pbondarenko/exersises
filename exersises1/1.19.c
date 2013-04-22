@@ -1,7 +1,4 @@
-#include <stdio.h>
-
-extern char * get_input ();
-extern char * reverse(char *);
+#include "my_lib.h"
 
 int main () {
 

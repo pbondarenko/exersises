@@ -1,0 +1,3 @@
+delete_string.o delete_string.dep: delete_string.c my_lib.h
+
+my_lib.h:

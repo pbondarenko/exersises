@@ -1,7 +1,4 @@
-#include<string.h>
-
-#include <stdio.h>
-#include <stdlib.h>
+#include "my_lib.h"
 
 char * delete_brackets (char * line) {
 	int len = strlen(line);

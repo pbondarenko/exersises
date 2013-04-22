@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include "my_lib.h"
+ 
 char * get_line() {
 	char * a;
 	int len = 0;
