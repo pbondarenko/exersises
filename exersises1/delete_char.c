@@ -24,6 +24,7 @@ char * delete_char (char * line) {
 				in_string ^= 1;
 				continue;
 			}
+			continue;
 		}
 		if (line[i] == '\'') {
 			in_char ^= 1;

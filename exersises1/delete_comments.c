@@ -2,7 +2,7 @@
 char * delete_comments(char * line) {
 	int i;
 	int len = strlen(line);
-	char * result = (char * ) malloc(len);
+	char * result = (char * ) malloc(len+1);
 	int sz_result = 0;
 	int in_comm_, in_string, in_symb, in_comm;
 	for (in_comm_ = in_string = in_symb = in_comm = i = 0; i < len; ++i) {
