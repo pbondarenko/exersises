@@ -4,9 +4,12 @@
 int getch(void);
 void ungetch(int);
 /* getop: получает следующий оператор или операнд */
-int getop(char s[])
+int getop(char * s)
 {
+    free(s);
     int i, c;
+    int cap = 2;
+    s = (char *)malloc(cap);
     while ((s[0] = c = getch()) == ' ' || c == '\t' )
         ;
     if (c == '\n')
@@ -23,12 +26,40 @@ int getop(char s[])
     		return c; /* не число */
     }
 
-    if (isdigit(c)) /* накапливаем целую часть */
-        while (isdigit(s[++i] = c = getch()))
-            ;
-    if (c == '.') /* накапливаем дробную часть */
-        while (isdigit(s[++i] = c = getch()))
-            ;
+    if (isdigit(c)){ /* накапливаем целую часть */
+	   if(i >= cap - 2)
+                {
+                        cap *= 2;
+                        s = (char*) realloc(s, cap);
+                }
+	
+        while (isdigit(s[++i] = c = getch())) {
+		if(i >= cap - 2)
+		{
+			cap *= 2;
+			s = (char*) realloc(s, cap);
+		}
+			
+	}
+    }    
+    if (c == '.'){ 
+	/* накапливаем дробную часть */
+	   if(i >= cap - 2)
+                {
+                        cap *= 2;
+                        s = (char*) realloc(s, cap);
+                }
+
+        while (isdigit(s[++i] = c = getch())){
+		   if(i >= cap - 2)
+                {
+                        cap *= 2;
+                        s = (char*) realloc(s, cap);
+                }
+
+	}
+    }
+    s = (char*)realloc(s, i+1);
     s[i] = '\0';
     if (c != EOF)
         ungetch(c);

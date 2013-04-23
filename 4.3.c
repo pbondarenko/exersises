@@ -10,7 +10,7 @@ int main ()
 {
     int type;
     double op2, op3;
-    char s[MAXOP];
+    char* s;
     while ((type = getop (s)) != EOF && type != '\n') {
         switch (type) {
         case NUMBER:
@@ -49,5 +49,6 @@ int main ()
           break;
       }
   }
+  free(s);
   return 0;
 }
