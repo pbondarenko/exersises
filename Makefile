@@ -1,7 +1,7 @@
 
 CFLAGS:= -O0 -g3
 
-include *.dep
+-include *.dep
 
 %.o: %.c
 	$(CC) -c $< -MMD -MF $*.dep -MT '$*.o $*.dep' -MP -o $*.o  
