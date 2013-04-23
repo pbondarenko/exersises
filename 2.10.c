@@ -1,12 +1,10 @@
 #include <stdio.h>
-char lower (char c);
+#include <ctype.h>
+
 int main() {
 	char c;
 	for(;(c = getchar()) != EOF;) {
-		putchar(lower(c));
+		putchar(tolower(c));
 	}
 	return 0;
-}
-char lower(char c) {
-	return (('A' <= c && c <= 'Z') ?(c - 'A' + 'a'):(c));
 }
