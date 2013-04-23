@@ -4,13 +4,13 @@
 
 
 int main () {
-	for (; ;) {
-		char * line  = get_line();
-		int to_print = htol(line);
-		printf("%d\n", to_print);
+
+	char * line  = get_line();
+	int to_print = htol(line);
+	printf("%d\n", to_print);
 		
-		free(line);
-	}
+	free(line);
+	
 
 	return 0;
 }
