@@ -2,6 +2,7 @@
 #include <limits.h>
 #include <float.h>
 int main() {
+	printf("%d\n", sizeof(long));
 	printf("signed char %d %d\n", SCHAR_MIN, SCHAR_MAX);
 	printf("unsigned char %d\n", UCHAR_MAX);
 	printf("signed short int %d %d\n", SHRT_MIN, SHRT_MAX);

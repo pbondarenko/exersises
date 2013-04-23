@@ -8,7 +8,7 @@ int main () {
 	int len;
 
 	char * line;
-	for (max_len = 0; len = strlen((line = get_line())) > 0;) {
+	for (max_len = 0; ((len = strlen((line = get_line()))) > 0);) {
 
 		if (max_len < len) {
 			max_len = len;

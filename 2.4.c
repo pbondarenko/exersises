@@ -1,20 +1,16 @@
-#include <stdio.h>
-#include <string.h>
-#define NMAX 1000
-void get_line(char[]);
-void squeeze(char[], char[]);
+#include "my_lib.h"
 int main() {
-	char s1[NMAX];
-	char s2[NMAX];
+	char * s1;
+	char * s2;
 	for(;;) {
-		get_line(s1);
-		get_line(s2);
+		s1 = get_line();
+		s2 = get_line();
 		squeeze(s1, s2);
 		printf("%s\n", s1);
 	}
 	return 0;
 }
-void squeeze(char s1[], char s2[]) {
+void squeeze(char * s1, char * s2) {
 	int len1 = strlen(s1);
 	int len2 = strlen(s2);
 	int i = 0, j;
@@ -32,12 +28,5 @@ void squeeze(char s1[], char s2[]) {
 
 	}
 	s1[szs1] = '\0';
-}
-void get_line(char a[]) {
-	int i = 0;
-	char c;
-	for(i = 0; i < NMAX && (c = getchar()) != EOF && c != '\n'; ++i)
-		a[i] = c;
-	a[i] = '\0';
-
+	s1 = (char *)realloc(s1, szs1 + 1);
 }

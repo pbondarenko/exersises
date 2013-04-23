@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <memory.h>
+#include <stdlib.h>
 int main () {
 	int * cnt;
 	int cap = 256;

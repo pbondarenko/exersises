@@ -24,4 +24,6 @@ void push(double);
 double pop(void);
 char * print_n_symb_in_line(char *, int);
 char * reverse(char *);
+int htol(char*);
+void squeeze(char *, char *);
 #endif /*MY_LIB*/
