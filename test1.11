@@ -1,0 +1,14 @@
+#!/usr/bin/make
+
+all:
+
+test1:
+		@x=$$(echo ". ." | ./1.11) && [ $$x -eq 2 ]
+		@x=$$(echo "qwe wert;lk ad aa afsdf sdfs sd" | ./1.11) && [ $$x -eq 7 ] || echo "tests x failed"
+		x=`echo -e 'qwe wert;\nlk ad aa afsdf sdfs sd'` && echo $$x 
+		#&& [ $$x -eq 8 ] || echo "tests y failed" | ./1.11
+
+
+all: test1
+
+	
