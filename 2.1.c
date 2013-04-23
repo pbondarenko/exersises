@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include <float.h>
+
 int main() {
 	printf("signed char %c %c\n", SCHAR_MIN, SCHAR_MAX);
 	printf("unsigned char %u\n", UCHAR_MAX);
