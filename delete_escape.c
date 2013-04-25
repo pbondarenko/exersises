@@ -1,17 +1,18 @@
 #include "my_lib.h"
 
-int escape (char c) {
-	return c == 't' || c == '\'' || c == '\"' || c == '\?' || c == '\\'
-            || c == '0' || c == 'a' || c == 'b' || c == 'n' || c == 'f' || c == 'r' ||
-               c == 'v'; 
-}
-int is_8 (char c) {
-	return '0' <= c && c <= '7';
-}
-int is_16 (char c) {
-	return ('0' <= c && c <= '9') || ('A' <= c && c <'F'); 
-}
 char * delete_escape (char * line) {
+	int escape (char c) {
+        	return c == 't' || c == '\'' || c == '\"' || c == '\?' || c == '\\'
+            	|| c == '0' || c == 'a' || c == 'b' || c == 'n' || c == 'f' || c == 'r' ||
+               	c == 'v';
+	}
+	int is_8 (char c) {
+        	return '0' <= c && c <= '7';
+	}
+	int is_16 (char c) {
+        	return ('0' <= c && c <= '9') || ('A' <= c && c <'F');
+	}
+
 	int len = strlen(line);
 	int i;
 	int sz_result = 0;

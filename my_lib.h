@@ -6,6 +6,8 @@
 #include <string.h>
 #include <memory.h>
 #include <ctype.h>
+#include <limits.h>
+#include <float.h>
 
 typedef enum {
 	OK,
@@ -37,4 +39,11 @@ char * reverse(char *);
 int htol(char*);
 void squeeze(char *, char *);
 int any(char*, char*);
+int binsearch(int, int*, int);
+char * escape(char*);
+char * expand(char*);
+char * itoa(int);
+char * itoa_window(int, int);
+void swap(char*, char*);
+char * itob(int, int);
 #endif /*MY_LIB*/
