@@ -19,7 +19,7 @@ char * escape(char * t) {
                 }
         }
         result[szs] = '\0';
-        result = (int *)realloc(result, szs+1);
+        result = (char *)realloc(result, szs+1);
         return result;
 }
 
