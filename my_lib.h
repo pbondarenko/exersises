@@ -8,6 +8,7 @@
 #include <ctype.h>
 #include <limits.h>
 #include <float.h>
+#define NUMBER '0' /* признак числа */
 
 typedef enum {
 	OK,
@@ -46,4 +47,18 @@ char * itoa(int);
 char * itoa_window(int, int);
 void swap(char*, char*);
 char * itob(int, int);
+int strindex(char*, char*);
+double atofloat(char*);
+
+struct stack {
+        double * val;
+        int capacity;
+        int top;
+};
+
+struct stack * stack_init();
+void stack_free(struct stack*);
+void stack_push(struct stack *, double);
+double stack_pop(struct stack*);
+
 #endif /*MY_LIB*/
