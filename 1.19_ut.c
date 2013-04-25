@@ -1,7 +1,6 @@
 #include "check_ext.h"
-#include <string.h>
+#include "my_lib.h"
 
-extern void reverse(char *);
 
 START_TEST(reverse_palindrome) {
 	int len;
@@ -9,13 +8,15 @@ START_TEST(reverse_palindrome) {
 		char * line = (char *) malloc(len+1);
 		line[len] = '\0';
 		int i;
-		for (i = 0; i < len; ++i) {
-			line[i] = line[len - i -1] = 'a'+i;
+		for (i = 0; i < len/2 + (len&1); ++i) {
+			line[i] = line[len - i -1] = (char)('a'+i);
 		}
-		char * rline = (char *) malloc(len + 1);
-		memcpy(rline, line, len + 1);
-		reverse(rline);
-		//fail_unless(strcmp(line, rline) != 0, "reverse palindrome is incorrect");
+		char * rline = reverse(line);
+	        //printf("%s %s %d %d\n", line, rline, line, rline);	
+		fail_if(strcmp(line, rline) != 0);
+		
+		free(line);
+		free(rline);
 	}
 }
 END_TEST
@@ -24,7 +25,7 @@ END_TEST
 int main() {
 
 	return run_suite(
-                START_SUITE(test1){
+                START_SUITE(test_reverse){
                         ADD_CASE(
                                 START_CASE(reverse){
                                         ADD_TEST(reverse_palindrome);

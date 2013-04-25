@@ -7,6 +7,15 @@
 #include <memory.h>
 #include <ctype.h>
 
+typedef enum {
+	OK,
+	ERROR_COMMENTS,
+	ERROR_ESCAPE,
+	ERROR_CHAR,
+	ERROR_STRING,
+	ERROR_BRACKET
+} good_c_answer;
+
 char * get_input();
 char * get_line();
 char * all_spaces_to_one(char *);
@@ -20,7 +29,7 @@ char * entab(char *);
 int getch(void);
 void ungetch(int);
 int getop(char *);
-char * good_c(char *);
+good_c_answer good_c(char *);
 void push(double);
 double pop(void);
 char * print_n_symb_in_line(char *, int);
