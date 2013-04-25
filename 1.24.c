@@ -17,7 +17,7 @@ int main() {
 		case ERROR_BRACKET: puts("Error in brackets"); break;
 		default: puts("Unknown error"); break;
 	}
-	printf("%s\n", result);
+//	printf("%s\n", result);
 	free(line);
 //	free(result);
 
