@@ -1,26 +1,26 @@
 #include "my_lib.h"
 
-char * delete_escape (char * line) {
-	int escape (char c) {
-        	return c == 't' || c == '\'' || c == '\"' || c == '\?' || c == '\\'
-            	|| c == '0' || c == 'a' || c == 'b' || c == 'n' || c == 'f' || c == 'r' ||
-               	c == 'v';
-	}
-	int is_8 (char c) {
-        	return '0' <= c && c <= '7';
-	}
-	int is_16 (char c) {
-        	return ('0' <= c && c <= '9') || ('A' <= c && c <'F');
-	}
+int is_escape (char c) {
+	return c == 't' || c == '\'' || c == '\"' || c == '\?' || c == '\\'
+        || c == '0' || c == 'a' || c == 'b' || c == 'n' || c == 'f' || c == 'r' ||
+        c == 'v';
+}
+int is_8 (char c) {
+	return '0' <= c && c <= '7';
+}
+int is_16 (char c) {
+	return ('0' <= c && c <= '9') || ('A' <= c && c <'F');
+}
 
-	int len = strlen(line);
+char * delete_escape (char * line) {
 	int i;
 	int sz_result = 0;
+	int len = strlen(line);
 	char * result = (char *) malloc(len + 1);
 	int in_char = 0, in_string = 0;
 	for (i = 0; i < len; ++i) {
 		if (in_char || in_string) {
-			if (line[i] == '\\' && i < len - 1 && escape(line[i+1])) {
+			if (line[i] == '\\' && i < len - 1 && is_escape(line[i+1])) {
 				i++;
 				continue;
 			}
